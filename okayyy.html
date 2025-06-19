@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #000 url('https://i.pinimg.com/736x/01/85/be/0185be3c49051902b4e6850ecc14dd4f.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 0;
+    }
+
+    .container {
+      z-index: 1;
+      max-width: 420px;
+      width: 100%;
+      padding: 30px 20px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .link {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      background: rgba(0, 172, 238, 0.2);
+      color: #00acee;
+    }
+
+    .link i {
+      margin-right: 10px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Optional: You can add your profile picture here -->
+    <img src="https://i.pinimg.com/736x/01/85/be/0185be3c49051902b4e6850ecc14dd4f.jpg" alt="Profile" class="avatar" />
+
+    <h1>DK</h1>
+    <p>Follow the movement🔥</p>
+
+    <a class="link" href="https://www.instagram.com/mcgono_wp?igsh=MXh0YXpsdmFuZTNrNg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a class="link" href="https://www.tiktok.com/@dk_thedj?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a class="link" href="https://www.facebook.com/share/1Ahs1KuUiA/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a class="link" href="https://wa.me/qr/NH57BRBATAZHP1" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a class="link" href="mailto:mcgono9@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
+
+    <footer>&copy; 2025 DK / Hotline Ent.</footer>
+  </div>
+</body>
+</html>
