@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Card - Tyler Saunders</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #333;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s ease;
+    }
+
+    .card.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .social-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+  <div class="card scroll-fade flex flex-col lg:flex-row items-center p-6 lg:p-10 gap-6">
+    <!-- Profile Image -->
+    <div class="w-48 h-48 rounded-3xl overflow-hidden shadow-md shrink-0">
+      <img src="images/472252673_122123064896416667_1743782794291557680_n.jpg" alt="TYLER SAUNDERS" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Info Content -->
+    <div class="flex-1 text-center lg:text-left">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">TYLER SAUNDERS</h1>
+
+      <p class="text-gray-600 mb-4">
+        Tyler Saunders, a talented young soccer player from Belhar, Cape Town, made the courageous decision to leave his hometown and family behind to chase his dream of becoming a professional soccer star in Johannesburg. With a heart full of determination and a mind focused on success, Tyler knew that great opportunities often come with great sacrifices. Though it was difficult to part ways with the people and community he loves, he believed that Johannesburg would open doors to higher-level training, exposure, and the chance to prove his skills on a bigger stage. Every step he takes on the field is not only for his future, but also to make his family proud and inspire other young athletes from Cape Town to follow their dreams, no matter how far they may seem.
+      </p>
+      
+      <!-- Ask a Question Button -->
+      <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+        <button id="askQuestionBtn" class="bg-white text-emerald-500 border border-emerald-500 px-5 py-2 rounded-full font-medium hover:bg-emerald-50 transition">
+          Ask me a question
+        </button>
+      </div>
+
+      <!-- Hidden question input popup -->
+      <div id="questionPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-lg p-6 w-full max-w-sm shadow-lg">
+          <h2 class="text-lg font-semibold mb-4">Ask me a question</h2>
+          <textarea id="questionInput" rows="3" class="w-full p-2 border border-gray-300 rounded mb-4 resize-none" placeholder="Type your question here..."></textarea>
+          <div class="flex justify-end gap-2">
+            <button id="cancelBtn" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
+            <button id="sendBtn" class="px-4 py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-6 flex justify-center lg:justify-start gap-5 text-gray-500 text-xl">
+        <a href="https://www.instagram.com/tyler.saunders79/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-icon hover:text-pink-500" title="Instagram" rel="noopener noreferrer">
+          <!-- Instagram -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4a4.4 4.4 0 011.6 1.1 4.4 4.4 0 011.1 1.6c.2.4.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3a4.4 4.4 0 01-1.1 1.6 4.4 4.4 0 01-1.6 1.1c-.4.2-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a4.4 4.4 0 01-1.6-1.1 4.4 4.4 0 01-1.1-1.6c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3A4.4 4.4 0 014 3.2a4.4 4.4 0 011.6-1.1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 100 13.4 6.7 6.7 0 000-13.4zm0 11a4.3 4.3 0 110-8.6 4.3 4.3 0 010 8.6zm6.9-11.3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/tyler.saunders.441887" target="_blank" class="social-icon hover:text-[#1877F2]" title="Facebook" rel="noopener noreferrer">
+          <!-- Facebook -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-3h2.4V9.3c0-2.3 1.4-3.6 3.4-3.6.9 0 1.8.1 2.1.1v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9H17l-.3 3h-2.4v7A10 10 0 0022 12"/>
+          </svg>
+        </a>
+
+        <a href="https://www.tiktok.com/@tylerjr.79?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon hover:text-black" title="TikTok" rel="noopener noreferrer">
+          <!-- TikTok -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.5 2 2 6.4 2 12s4.5 10 10 10 10-4.4 10-10S17.5 2 12 2zm1.8 5h2v.6c0 .5.3 1 .8 1.2a4 4 0 001.4.2v2.1a6.3 6.3 0 01-2.4-.5v3.7c0 2-1.6 3.7-3.7 3.7s-3.7-1.6-3.7-3.7 1.6-3.7 3.7-3.7c.2 0 .4 0 .6.1v2.1a1.5 1.5 0 00-.6-.1 1.5 1.5 0 100 3c.9 0 1.5-.7 1.5-1.5V7z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Slide-in animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.scroll-fade').forEach(el => observer.observe(el));
+
+    // WhatsApp question button functionality with mobile-friendly popup
+    const phoneNumber = "27710483582"; // <-- Replace with your WhatsApp number in international format, no '+' or spaces
+
+    const askQuestionBtn = document.getElementById('askQuestionBtn');
+    const questionPopup = document.getElementById('questionPopup');
+    const questionInput = document.getElementById('questionInput');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const sendBtn = document.getElementById('sendBtn');
+
+    askQuestionBtn.addEventListener('click', () => {
+      questionInput.value = '';
+      questionPopup.classList.remove('hidden');
+      questionInput.focus();
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      questionPopup.classList.add('hidden');
+    });
+
+    sendBtn.addEventListener('click', () => {
+      const question = questionInput.value.trim();
+      if (question) {
+        const message = encodeURIComponent(`Hi Tyler, I have a question: "${question}"`);
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappURL, '_blank');
+        questionPopup.classList.add('hidden');
+      } else {
+        alert('Please type a question before sending.');
+      }
+    });
+
+    // Optional: Close popup when clicking outside the modal content
+    questionPopup.addEventListener('click', (e) => {
+      if (e.target === questionPopup) {
+        questionPopup.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
